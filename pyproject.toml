@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hf-terminal-manager"
+version = "2.0.0"
+description = "A colorful interactive terminal manager for Hugging Face Hub"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "Sapthesh V" }
+]
+keywords = [
+  "huggingface",
+  "cli",
+  "tui",
+  "terminal",
+  "rich",
+  "python"
+]
+dependencies = [
+  "huggingface_hub>=0.23.0",
+  "InquirerPy>=0.3.4",
+  "rich>=13.7.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/sapthesh/huggingface-manager"
+Repository = "https://github.com/sapthesh/huggingface-manager"
+Issues = "https://github.com/sapthesh/huggingface-manager/issues"
+
+[project.scripts]
+hf-manager = "hf_manager:main_menu"
+
+[tool.setuptools]
+py-modules = ["hf_manager"]
